@@ -6,7 +6,7 @@ if [ $# -lt 1 ]; then
   exit -1
 fi
 
-IMAGE=frankliu/latex:ubuntu
+IMAGE=carracu123/latex:ubuntu
 exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/source "$IMAGE" "$@"
 
 ## docker image is built from scratch
