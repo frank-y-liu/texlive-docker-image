@@ -7,6 +7,8 @@ if [ $# -lt 1 ]; then
 fi
 
 IMAGE=carracu123/latex:ubuntu
+IMAGE=carracu123/latex_ctan:ubuntu
+
 exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/source "$IMAGE" "$@"
 
 ## docker image is built from scratch
