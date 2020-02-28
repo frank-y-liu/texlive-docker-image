@@ -20,7 +20,7 @@ ENV PATH="/usr/local/texlive/2019/bin/x86_64-linux:${PATH}"
 # Install latex packages
 RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommended sttools \ 
                   units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
-                  easylist paralist enumitem todonotes 
+                  easylist paralist enumitem todonotes xstring totpages ncctools preprint
 
 WORKDIR /source
 VOLUME ["/source"]
