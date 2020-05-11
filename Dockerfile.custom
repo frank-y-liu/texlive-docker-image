@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 MAINTAINER Frank Liu <bounce@frankliu.io>
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -15,14 +15,14 @@ RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz; \
     rm -r /install-tl-unx; \
     rm install-tl-unx.tar.gz
 
-ENV PATH="/usr/local/texlive/2019/bin/x86_64-linux:${PATH}"
+ENV PATH="/usr/local/texlive/2020/bin/x86_64-linux:${PATH}"
 
 # Install latex packages
 RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommended sttools \ 
                   units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
 		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
-                  multirow
+                  multirow titlesec pdfsync
 
 WORKDIR /source
 VOLUME ["/source"]
