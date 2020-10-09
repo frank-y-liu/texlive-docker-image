@@ -22,7 +22,7 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
 		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
-                  multirow titlesec pdfsync tocloft
+                  multirow titlesec pdfsync tocloft libertine newtx
 
 WORKDIR /source
 VOLUME ["/source"]
