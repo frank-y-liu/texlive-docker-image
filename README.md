@@ -1,7 +1,10 @@
 # Texlive docker image
 
-This TexLive docker image is built on the latest Ubuntu LTS (18.04.3 as of Dec 2019) and installs the default
+This TexLive docker image is built on the latest Ubuntu LTS (18.04.3 as of Oct 2020) and installs the default
 texlive-full in Ubuntu 18.04
+
+**Update Oct 2020**
+A custom CTAN build is available. It's based on Ubuntu 20.04.1 image.
 
 Quick Setup
 -----------
@@ -10,10 +13,12 @@ Build the docker image:
 ```bash
 make
 ```
-The image `carracu123/latex:ubuntu` ccontains `texlive-full`, the default packaged from ubuntu. It contains most of the macros and fonts. However some macros
+The image `frankliu1/latex:ubuntu` ccontains `texlive-full`, the default packaged from ubuntu. It contains most of the macros and fonts. However some macros
 may be out-of-date, which can cause compilation errors. The size is 3.4GB.
 
-Image `carracu123/latex_ctan:ubuntu` is built on the latest stable version of CTAN. It has `all` packages and fonts. The size is 6.3GB.
+Image `frankliu1/latex_ctan:ubuntu` is built on the latest stable version of CTAN. It has `all` packages and fonts. The size is 6.3GB.
+
+Image `frankliu1/latex_ctan:custom' is custom build with selected latex packages. It's based on Ubuntu LTS 20.04.1
 
 Usage
 ------------
