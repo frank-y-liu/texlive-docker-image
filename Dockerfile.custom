@@ -4,6 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -q \
     && apt-get install -qy build-essential wget libfontconfig1 \
+    && apt-get autoremove -y \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Install TexLive with scheme-small
@@ -23,7 +25,8 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
 		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
-                  multirow titlesec pdfsync tocloft libertine newtx lipsum
+                  multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
+		  ifoddpage relsize siunitx adjustbox collectbox
 
 WORKDIR /source
 VOLUME ["/source"]
