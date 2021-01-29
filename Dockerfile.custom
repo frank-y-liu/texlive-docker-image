@@ -3,7 +3,7 @@ MAINTAINER Frank Liu <bounce@frankliu.io>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -q \
-    && apt-get install -qy build-essential wget libfontconfig1 python3.8 \
+    && apt-get install -qy build-essential wget libfontconfig1 \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
@@ -26,7 +26,7 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
 		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
                   multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
-		  ifoddpage relsize siunitx adjustbox collectbox
+		  ifoddpage relsize siunitx adjustbox collectbox silence was
 
 WORKDIR /source
 VOLUME ["/source"]
