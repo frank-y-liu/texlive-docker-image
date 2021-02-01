@@ -26,7 +26,8 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
 		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
                   multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
-		  ifoddpage relsize siunitx adjustbox collectbox silence was
+		  ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
+		  xtab pgfplots circuitikz forloop
 
 WORKDIR /source
 VOLUME ["/source"]
