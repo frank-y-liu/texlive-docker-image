@@ -20,7 +20,8 @@ RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz; \
 ENV PATH="/usr/local/texlive/2021/bin/x86_64-linux:${PATH}"
 
 # Install latex packages
-RUN tlmgr update --self
+RUN tlmgr update --self --force
+# RUN tlmgr update --self
 RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommended sttools \ 
                   units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
                   easylist paralist enumitem todonotes xstring totpages ncctools preprint \
@@ -28,7 +29,7 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
 		  ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
 		  xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
-                  tcolorbox appendix
+                  tcolorbox appendix hyperxmp ifmtarg
 
 WORKDIR /source
 VOLUME ["/source"]
