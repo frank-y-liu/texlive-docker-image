@@ -29,7 +29,8 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
 		  ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
 		  xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
-                  tcolorbox appendix hyperxmp ifmtarg
+                  tcolorbox appendix hyperxmp ifmtarg tabto-generic changes algorithmicx \
+                  cleveref
 
 WORKDIR /source
 VOLUME ["/source"]
