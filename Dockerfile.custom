@@ -30,7 +30,7 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
 		  ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
 		  xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
                   tcolorbox appendix hyperxmp ifmtarg tabto-generic changes algorithmicx \
-                  cleveref
+                  cleveref axessibility accsupp
 
 WORKDIR /source
 VOLUME ["/source"]
