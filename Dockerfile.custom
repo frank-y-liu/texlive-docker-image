@@ -31,7 +31,7 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
 		  xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
                   tcolorbox appendix hyperxmp ifmtarg tabto-generic changes algorithmicx \
                   cleveref axessibility accsupp orcidlink comment threeparttable fncychap \
-                  epsf wallpaper sectsty
+                  epsf wallpaper sectsty minted
 
 WORKDIR /source
 VOLUME ["/source"]
