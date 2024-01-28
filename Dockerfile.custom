@@ -33,7 +33,8 @@ RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommende
                   cleveref axessibility accsupp orcidlink comment threeparttable fncychap \
                   epsf wallpaper sectsty minted multibib mhchem boxedminipage marginnote \
 		  pstricks pst-pdf luatex85 preview tablefootnote xifthen pgfgantt tocbibind \
-                  tikzfill pdfcol layouts tabularray ninecolors titlecaps ifnextok
+                  tikzfill pdfcol layouts tabularray ninecolors titlecaps ifnextok biblatex \
+		  makecell
 
 WORKDIR /source
 VOLUME ["/source"]
