@@ -1,4 +1,4 @@
-FROM ubuntu:jammy
+FROM ubuntu:noble
 MAINTAINER Frank Liu <bounce@frankliu.io>
 ENV DEBIAN_FRONTEND noninteractive
 
