@@ -1,6 +1,6 @@
 FROM ubuntu:noble
-MAINTAINER Frank Liu <bounce@frankliu.io>
-ENV DEBIAN_FRONTEND noninteractive
+LABEL maintainer="Frank Liu <bounce@frankliu.io>"
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -q \
     && apt-get install -qy build-essential wget libfontconfig1 \
@@ -17,24 +17,26 @@ RUN wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz; \
     rm -r /install-tl-unx; \
     rm install-tl-unx.tar.gz
 
-ENV PATH="/usr/local/texlive/2024/bin/x86_64-linux:${PATH}"
+ENV PATH="/usr/local/texlive/2025/bin/x86_64-linux:${PATH}"
 
 # Install latex packages
-RUN tlmgr update --self  --force
+# RUN tlmgr update --self  --force
 # RUN tlmgr update --self
-RUN tlmgr install latexmk collection-latexrecommended collection-fontsrecommended sttools \ 
-                  units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
-                  easylist paralist enumitem todonotes xstring totpages ncctools preprint \
-		  newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
-                  multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
-		  ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
-		  xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
-                  tcolorbox appendix hyperxmp ifmtarg tabto-generic changes algorithmicx \
-                  cleveref axessibility accsupp orcidlink comment threeparttable fncychap \
-                  epsf wallpaper sectsty minted multibib mhchem boxedminipage marginnote \
-		  pstricks pst-pdf luatex85 preview tablefootnote xifthen pgfgantt tocbibind \
-                  tikzfill pdfcol layouts tabularray ninecolors titlecaps ifnextok biblatex \
-		  makecell
+RUN tlmgr update --self --force
+RUN tlmgr install \
+    		latexmk collection-latexrecommended collection-fontsrecommended sttools \
+                units ifsym comment datetime fmtcount environ trimspaces framed wrapfig \ 
+                easylist paralist enumitem todonotes xstring totpages ncctools preprint \
+		newlfm setspace lastpage blindtext soul moresize algorithms subfigure \
+                multirow titlesec pdfsync tocloft libertine newtx lipsum algorithm2e \
+		ifoddpage relsize siunitx adjustbox collectbox silence was doi placeins \
+		xtab pgfplots circuitikz forloop xargs glossaries mfirstuc xfor datatool \
+                tcolorbox appendix hyperxmp ifmtarg tabto-generic changes algorithmicx \
+                cleveref axessibility accsupp orcidlink comment threeparttable fncychap \
+                epsf wallpaper sectsty minted multibib mhchem boxedminipage marginnote \
+		pstricks pst-pdf luatex85 preview tablefootnote xifthen pgfgantt tocbibind \
+                tikzfill pdfcol layouts tabularray ninecolors titlecaps ifnextok biblatex \
+		makecell
 
 WORKDIR /source
 VOLUME ["/source"]
