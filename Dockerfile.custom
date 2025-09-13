@@ -36,7 +36,7 @@ RUN tlmgr install \
                 epsf wallpaper sectsty minted multibib mhchem boxedminipage marginnote \
 		pstricks pst-pdf luatex85 preview tablefootnote xifthen pgfgantt tocbibind \
                 tikzfill pdfcol layouts tabularray ninecolors titlecaps ifnextok biblatex \
-		makecell apacite csvsimple footmisc sidecap
+		makecell apacite csvsimple footmisc sidecap svg transparent
 
 WORKDIR /source
 VOLUME ["/source"]
